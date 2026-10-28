@@ -428,7 +428,11 @@
     const info = () => fetch("api/info").then((r) => r.json());
     const claim = () => { if (phone) fetch(`api/claim?b=${phone}`, { method: "POST" }).catch(() => {}); };
     const had = () => { try { return sessionStorage.getItem("gp-phone") === "1"; } catch (err) { return false; } };
-    if (location.protocol.startsWith("http")) {
+    const onWeb = location.protocol === "https:" || (location.protocol === "http:" && !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname));
+    if (onWeb) {
+      // a published copy (GitHub Pages): no server here, so no phone
+      menu.innerHTML = "<p>The phone remote runs from the board on your laptop: in the board folder, double-click <b>Start board.command</b>. This web copy has everything else.</p>";
+    } else if (location.protocol.startsWith("http")) {
       info().then((i) => {
         if (!i.phone) { menu.innerHTML = "<p>This server was started with --local, so phones cannot reach it. Double-click <b>Start board.command</b> instead.</p>"; return; }
         draw(i);
