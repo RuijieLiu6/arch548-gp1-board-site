@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temporary Material Configurations</title>
+<meta name="description" content="Ruijie Liu, ARCH 548 Graduation Project I, Progress Review 1: buildings as temporary material configurations during Vancouver's transition to denser housing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0E14'/%3E%3Cpath d='M7 16 16 8l9 8v10H7z' fill='%23FFD23F' stroke='%23F3EFE6' stroke-width='1.6'/%3E%3Cpath d='M13 26v-6h6v6' fill='%23FF4F9A'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/board.css?v=104">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- the glow: each mark blooms in its own colour -->
+    <filter id="bloom" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.2" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="b2"/>
+      <feColorMatrix in="b2" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.55 0" result="b2a"/>
+      <feColorMatrix in="b1" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.6 0" result="b1a"/>
+      <feMerge><feMergeNode in="b2a"/><feMergeNode in="b1a"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+</svg>
+
+<!--
+  Each slide: one message. data-chapter places it on the chapter bar.
+  The script is in <aside class="notes">: one <p> per step. Each press of the
+  arrow key moves to the next <p>; elements with data-focus="n" light up on
+  step n (data-focus="-" only dims), .svg-fig data-spots spotlights regions of
+  a figure per step, data-ids lights named groups.
+-->
+
+<!-- ===================== 1 The question ===================== -->
+<section class="slide title" id="s01" data-time="13" data-title="Title" data-chapter="The question">
+  <div class="art" id="hero" role="img" aria-label="A Vancouver street in colour. One house comes apart into components that cross the street to a hub and return to build a multiplex on the same lot."></div>
+  <div class="lead">
+    <h1><span>Temporary</span><span>Material</span><span>Configurations</span></h1>
+    <p class="sub">Unbuilding Vancouver's houses for the missing middle</p>
+    <p class="who">Ruijie Liu, ARCH 548 Graduation Project I, Progress Review 1, 28 October 2026</p>
+  </div>
+  <div class="foot"><button class="replay" type="button" id="replay">Replay the street</button></div>
+  <aside class="notes">
+    <p>Good afternoon. I'm Ruijie, and my project is <b class="stress">Temporary Material Configurations</b>: <i class="cue">pause</i> what architecture can do with houses Vancouver takes down for denser housing.</p>
+  </aside>
+</section>
+
+<section class="slide quote statement" id="s02" data-time="19" data-title="Topic statement" data-chapter="The question">
+  <blockquote>
+    <p>I investigate how architectural design might change when buildings are understood as <span class="glowword">temporary material configurations</span> whose components can be evaluated, salvaged and reassembled during Vancouver's transition toward denser housing.</p>
+  </blockquote>
+  <div class="foot"><span></span><p class="src">Topic statement</p></div>
+  <aside class="notes">
+    <p>My topic statement: <i class="cue">pause</i> I investigate how architectural design might change when buildings are understood as temporary material configurations, whose components can be evaluated, salvaged and reassembled during Vancouver's transition toward denser housing. <i class="cue">pause</i> Temporary describes the <b class="stress">arrangement</b>; materials can outlast it.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s03" data-time="9" data-title="A permanent object" data-chapter="The question">
+  <div class="art"><div class="svg-fig" data-src="figures/astra/permanent-object-dark.svg"></div></div>
+  <div class="foot"><p class="msg">A permanent object can only be destroyed.</p><p class="src">Drawing: R. Liu with Astra 6. Excavator after “Excavator” by RhymOne (Sketchfab, CC BY 4.0) and lorry after “Cargo Truck” by J-Toastie (Poly Pizza, CC BY 3.0), rendered in the board camera and adapted; workers after Quaternius (CC0).</p></div>
+  <aside class="notes">
+    <p>We build most houses as <b class="stress">permanent</b> objects: glued, sealed and poured together, so at the end <i class="cue">pause</i> the only way out is the excavator.</p>
+  </aside>
+</section>
+
+<!-- ===================== 2 Why now ===================== -->
+<section class="slide" id="s04" data-time="9" data-title="Global carbon" data-chapter="Why now">
+  <div class="art" id="co2"></div>
+  <div class="foot"><p class="msg">Buildings make about <em>a third</em> of the world's carbon.</p><p class="src">UNEP / GlobalABC, Global Status Report for Buildings and Construction 2024/2025, 17 March 2025: 34% of global CO₂ emissions and 32% of energy; a sector headline, not a demolition-only share.</p></div>
+  <aside class="notes">
+    <p>Why now? <i class="cue">pause</i> I'd start with carbon: the UN Environment Programme finds that buildings and construction make about <b class="stress">a third</b> of the world's emissions.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s05" data-time="9" data-title="Landfill" data-chapter="Why now">
+  <div class="art"><div class="svg-fig" data-src="figures/astra/landfill-dark.svg"></div></div>
+  <div class="foot"><p class="msg">And about <em>a third</em> of what our region landfills.</p><p class="src">Metro Vancouver, Construction and Demolition Waste: construction, renovation and demolition material is about a third of what goes to its landfill; 2022 waste composition study: wood and plastic are its largest parts. Drawing: R. Liu with Astra 6.</p></div>
+  <aside class="notes">
+    <p>Closer to home, building and demolition material makes up about <b class="stress">a third</b> of what Metro Vancouver landfills.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s06" data-time="9" data-title="A home every three hours" data-chapter="Why now">
+  <div class="art" id="homes"></div>
+  <div class="foot"><p class="msg">A home comes down <em>every three hours</em>.</p><p class="src">Metro Vancouver average, ground-oriented dwellings, 2012–2022: 2,621 a year (Light House, A Blueprint for Change, 2023). 8,760 h ÷ 2,621 = 3.3 h.</p></div>
+  <aside class="notes">
+    <p>And homes keep coming down: <i class="cue">pause</i> across the region, about one every <b class="stress">three hours</b>.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s07" data-time="14" data-title="We pay for the land" data-chapter="Why now">
+  <div class="art"><div class="svg-fig" data-src="figures/astra/land-value-dark.svg" data-ids='[[], ["layer-house"]]'></div></div>
+  <div class="foot"><p class="msg">We pay for the land; the house is <em>a small fraction</em>.</p><p class="src">For half of Vancouver's detached houses in 2017, the building was below 7.5% of assessed value (Dahmen and von Bergmann, BC Assessment 2005–2015). +179,000 people in Metro Vancouver (census metropolitan area), 2016–2021 (Statistics Canada). Drawing: R. Liu with Astra 6.</p></div>
+  <aside class="notes">
+    <p>Houses come down because we mostly pay for <b class="stress">land</b>.</p>
+    <p>Joseph Dahmen and data scientist Jens von Bergmann found that for half the city's detached houses, the building is <b class="stress">a small fraction</b> of its value.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s08" data-time="19" data-title="Why now: R1-1 zoning" data-chapter="Why now">
+  <div class="art"><div class="svg-fig" data-src="figures/astra/house-to-multiplex-dark.svg" data-ids='[[], ["layer-before"], ["layer-after"], ["layer-teardown"]]' data-reveal='{"layer-teardown": 3}'></div></div>
+  <div class="foot"><p class="msg">Since 2023, one lot can hold <em>six to eight</em> homes, after a teardown.</p><p class="src">City of Vancouver: R1-1 replaced nine RS zones, 17 Oct 2023; multiplex up to 1.0 FSR, 3–6 strata or 8 secured rental units (557 m² sites for 6–8). Before: house, suite and laneway home, 0.7 FSR. A multiplex is new construction (Low Density Housing Options guide, Dec 2025, p. 18). About 370 multiplex applications accepted by March 2025 (City memo, 29 May 2025). Drawing: R. Liu with Astra 6.</p></div>
+  <aside class="notes">
+    <p>Zoning explains the timing.</p>
+    <p>Until 2023, most lots allowed a house, suite and laneway home.</p>
+    <p>Since 2023, new zoning allows multiplexes: <i class="cue">pause</i> six to eight homes a lot.</p>
+    <p>A multiplex must be new, so the old house comes down first. <i class="cue">pause</i> The question is what happens to its <b class="stress">parts</b>.</p>
+  </aside>
+</section>
+
+<section class="slide quote" id="s09" data-time="9" data-title="Who it is for" data-chapter="Why now">
+  <blockquote>
+    <p>I share a house with several others to afford this city.</p>
+  </blockquote>
+  <div class="foot"><span></span><p class="src">The quote is my own. A purpose-built two-bedroom rents for $2,363 a month on average (CMHC Rental Market Report, Dec 2025).</p></div>
+  <aside class="notes">
+    <p><i class="cue">slower</i> The new homes matter to people like me: newcomers who share a house with several others to afford the city.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s10" data-time="20" data-title="Why homes" data-chapter="Why now">
+  <div class="art" id="kinds"></div>
+  <div class="foot"><p class="msg">Why homes? They are the <em>steadiest changers</em>.</p><p class="src">Stewart Brand, How Buildings Learn, 1994, ch. 1, “Flow”, after Sim Van der Ryn.</p></div>
+  <aside class="notes">
+    <p>I chose homes, though shops and factories come down too. <i class="cue">pause</i></p>
+    <p>In How Buildings Learn, Stewart Brand sorts buildings by how they change.</p>
+    <p>Commercial buildings change <b class="stress">fast</b>; <i class="cue">keep going</i></p>
+    <p>institutions <b class="stress">resist</b> change; <i class="cue">keep going</i></p>
+    <p>homes change <b class="stress">steadily</b>, keeping a record of the family inside.</p>
+    <p>So homes are my test case, and that is deliberate.</p>
+  </aside>
+</section>
+
+<!-- ===================== 3 What others know ===================== -->
+<section class="slide" id="s11" data-time="24" data-title="Who is asking" data-chapter="What others know">
+  <div class="art" id="timeline"></div>
+  <div class="foot"><p class="msg">The question is being raised, in Vancouver and beyond.</p><p class="src">Vancouver Green Demolition By-law 2014; Portland deconstruction ordinance 2016; Dahmen, von Bergmann and Das 2020; Lynch 2022; Cornell CCL 2022; Light House 2023; Unbuilders (trading status not confirmed); MIT Building Technology 2025. Images: City of Vancouver; portland.gov; IGI Global; Lynch 2022 (CC BY 4.0); Cornell AAP; Light House; MIT Architecture.</p></div>
+  <aside class="notes">
+    <p>I'm not the first to ask. <i class="cue">pause</i></p>
+    <p>Vancouver and Portland regulate demolition waste.</p>
+    <p>Dahmen and von Bergmann weighed the carbon of replacement.</p>
+    <p>Geographer Nicholas Lynch studied Vancouver's deconstruction trades, and Cornell's Circular Construction Lab rebuilt with a house it took apart.</p>
+    <p>The non-profit Light House and the deconstruction firm Unbuilders pushed for salvage.</p>
+    <p>MIT engineers read demolition records for reusable structure.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s12" data-time="20" data-title="Layers change at different rates" data-chapter="What others know">
+  <div class="art"><div class="svg-fig" data-src="figures/astra/shearing-layers-dark.svg" data-ids='[[], ["layer-spaceplan"], ["layer-skin"], ["layer-structure"], []]'></div></div>
+  <div class="foot"><p class="msg">Layers change at different rates, and could <em>leave</em> at different times.</p><p class="src">After Stewart Brand, How Buildings Learn, 1994: shearing layers and their rates. CMHC Materials Guide 2025, indicative supplier averages: interior paint about 10 years, fibre-cement cladding about 60, no figure for the frame. Salvage layer and drawing: R. Liu with Astra 6.</p></div>
+  <aside class="notes">
+    <p>Brand's six layers change at different rates, from site to stuff.</p>
+    <p>CMHC, Canada's housing agency, gives some of them lifespans: finishes last years, <i class="cue">keep going</i></p>
+    <p>cladding, decades, <i class="cue">keep going</i></p>
+    <p>the structural frame, <i class="cue">pause</i> <b class="stress">no figure at all</b>.</p>
+    <p>To his six I add <b class="stress">salvage</b>: <i class="cue">pause</i> when a configuration ends, each layer could leave on its own clock.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s13" data-time="31" data-title="Position" data-chapter="What others know">
+  <div class="art" id="litmap"></div>
+  <div class="foot"><p class="msg">My work sits between <em>assessment</em> and <em>design</em>.</p><p class="src">Lynch 2022; Lambec, Bastien-Masse and Fivet 2025 (EPFL; 21 procedures compared); Addis 2006; Gorgolewski 2008; ISO 20887:2020; Nielsen-Roine, Meyboom and Patel, Design for Deconstruction in Light Wood Frame, UBC 2025. Images: covers and first pages from each publisher; Lynch and Lambec under CC BY 4.0.</p></div>
+  <aside class="notes">
+    <p>Four kinds of work shape my position.</p>
+    <p>Recovery practice shows salvage depends on skills, timing and markets.</p>
+    <p>Engineers at EPFL, the Swiss Federal Institute of Technology in Lausanne, compare ways of judging reuse.</p>
+    <p>Stock-led design, from engineer Bill Addis and architect Mark Gorgolewski, designs from what exists.</p>
+    <p>Design for disassembly, now standardised, plans the next taking apart; at SALA, AnnaLisa Meyboom and Kaia Nielsen-Roine adapted it to light wood frame.</p>
+    <p>My work sits <b class="stress">between</b> assessment and design.</p>
+  </aside>
+</section>
+
+<section class="slide quote" id="s14" data-time="15" data-title="The gap" data-chapter="What others know">
+  <blockquote>
+    <p>How should evidence from a real house change the next architecture?</p>
+  </blockquote>
+  <div class="foot"><span></span><p class="src">Unresolved here, not a claim that nobody links salvage to design (Rose and Stegemann 2019; Cornell CCL 2022; Lambec et al. 2025).</p></div>
+  <aside class="notes">
+    <p>So here's the gap. <i class="cue">pause</i> We can assess parts, and design buildings that come apart. <i class="cue">pause</i> But we <b class="stress">don’t yet know</b> how evidence from a real Vancouver house should change the next architecture, or where parts wait in between.</p>
+  </aside>
+</section>
+
+<!-- ===================== 4 How I work ===================== -->
+<section class="slide" id="s15" data-time="11" data-title="Where it began" data-chapter="How I work">
+  <div class="art origin-art">
+    <p class="ask" data-focus="0 1">What would it take to treat a house coming down as <em>material for the next one</em>?</p>
+    <div class="paths">
+      <div class="path" data-focus="1"><p class="who"><b>ARCH 545A</b>, directed study with Joanne Gates</p><p class="how">people and materials: engagement and observation on site</p></div>
+      <div class="path" data-focus="1"><p class="who"><b>ARCH 545B</b>, directed study with Xun Liu</p><p class="how">data: an online hub for salvaged parts</p></div>
+    </div>
+    <p class="ends" data-focus="1">Both ended in one finding: a reuse decision framework.</p>
+  </div>
+  <div class="foot"><p class="msg">One question, followed <em>two ways</em>.</p><p class="src">Directed studies, UBC SALA, summer 2026.</p></div>
+  <aside class="notes">
+    <p>I came to this gap by watching sound houses come down as waste. <i class="cue">pause</i> Could they become the <b class="stress">next building</b>?</p>
+    <p>This summer I followed that through two directed studies.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s16" data-time="24" data-title="Study one: on site" data-chapter="How I work">
+  <div class="art gates">
+    <div class="g-dia" id="immersion"></div>
+    <div class="g-shots">
+      <figure data-focus="2 3"><img src="assets/img/ds-immersion.jpg" alt="A student chiselling a tenon into a timber beam on a painted deck."><figcaption>Cutting a tenon, Material Immersion</figcaption></figure>
+      <figure data-focus="2 3"><img src="assets/img/ds-ubcfarm.jpg" alt="Stacked boards and pallets stored under a fabric shelter."><figcaption>Stored timber at UBC Farm, the course site</figcaption></figure>
+    </div>
+  </div>
+  <div class="foot"><p class="msg">Watching materials move, then <em>joining them by hand</em>.</p><p class="src">ARCH 545A, directed study with Joanne Gates, Architect AIBC, lecturer, UBC SALA. Materials Lab: samples donated by local suppliers for exhibition and teaching, sorted by work-learn students. Material Immersion, summer course at UBC Farm, 2026: 25 students in two teams of 12 and 13; R. Liu, teaching assistant. Photos: R. Liu.</p></div>
+  <aside class="notes">
+    <p>The first, with Joanne Gates, was observation on site.</p>
+    <p>Weekly at the Materials Lab, I listened as work-learn students sorted donated samples: <i class="cue">pause</i> what stays, what goes, how to group them.</p>
+    <p>As her teaching assistant on Material Immersion, I helped oversee twenty-five students, one team with logs, one with sawn wood, <i class="cue">keep going</i></p>
+    <p>both trying tenon joints, where my interest in joints began.</p>
+  </aside>
+</section>
+
+<section class="slide side dg-slide" id="s17" data-time="27" data-title="The pagoda study" data-chapter="How I work">
+  <div class="art">
+    <div class="dougong" id="dougong"><canvas aria-label="A Song bracket set that comes apart into its blocks and arms, then goes back together"></canvas><div class="dg-labels"></div>
+      <p class="dg-note">A Song eight-puzuo bracket set (八铺作), 111 parts, a teaching model · drag to turn</p>
+      <a class="dg-print" href="https://makerworld.com/en/models/2399233" target="_blank" rel="noopener">Print the 85-part model on MakerWorld ↗</a>
+    </div>
+  </div>
+  <div class="lead">
+    <figure class="photo"><img src="assets/img/pagoda.jpg" alt="The Yingxian Wooden Pagoda, an octagonal timber tower of bracket sets and balconies, seen from below."><figcaption>The pagoda study: Yingxian Pagoda, Shanxi, built 1056, surveyed by Liang Sicheng's team in 1933. Photo: R. Liu, July 2026.</figcaption></figure>
+    <p class="msg">Short pieces, joined, carry the roof, and <em>come apart again</em>.</p>
+  </div>
+  <div class="foot"><span></span><p class="src">UNESCO Tentative List submission, 2013: built 1056, about 67 m high, over 15,400 timber elements. Liang Ssu-ch'eng (Liang Sicheng), A Pictorial History of Chinese Architecture, ed. W. Fairbank, 1984; Liang and Lin Huiyin's Shanxi surveys for the Society for Research in Chinese Architecture, 1930s. Bracket set on screen: original, unmeasured teaching model by R. Liu with Astra 6, after the Yingzao Fashi (1103) and two Bilibili assembly studies (BV1Kg1TYJEDd, BV1WX4y127Pq). Printed model: 宋式八铺作斗拱 by user_3800505495, MakerWorld, Standard Digital File License, personal printing.</p></div>
+  <aside class="notes">
+    <p>Joints then took me to Shanxi, in China, to timber buildings the architects Liang Sicheng and Lin Huiyin drew.</p>
+    <p>In the Yingxian Pagoda, a timber tower from 1056, bracket sets called dougong lock short pieces without nails or glue, <i class="cue">pause</i> yet carry the roof far out.</p>
+    <p>A short piece isn't waste <b class="stress">if a joint can make it work</b>. <i class="cue">pause</i> <i class="cue">hold up the printed set</i> Please try it.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s18" data-time="26" data-title="Study two: an online hub" data-chapter="How I work">
+  <div class="art xun">
+    <figure class="x-shot"><a href="https://ruijieliuthesis.netlify.app" target="_blank" rel="noopener"><img src="assets/img/ds-website.jpg" alt="The Constructed Quarry research website, its argument page."></a><figcaption class="x-link"><img class="x-qr" src="assets/img/qr-website.svg" alt="QR code for ruijieliuthesis.netlify.app"><span>The Constructed Quarry, a working prototype<br><a href="https://ruijieliuthesis.netlify.app" target="_blank" rel="noopener">ruijieliuthesis.netlify.app</a></span></figcaption></figure>
+    <div class="x-side">
+      <ol class="x-flow" data-focus="1">
+        <li><b>List</b>users upload parts they would otherwise discard, each marked measured, estimated or unknown</li>
+        <li><b>Sort and map</b>each part sorted by material and role, and placed on a map</li>
+        <li><b>Find and reserve</b>others search the stock near them and reserve it for their next build, so materials circulate</li>
+      </ol>
+      <p class="x-proto" data-focus="1">A prototype: every function works; the users are hypothetical.</p>
+      <p class="x-find" data-focus="2"><b>What it showed:</b> the by-law allows used materials; the barrier is proving an old part meets a standard written for a new one.</p>
+    </div>
+  </div>
+  <div class="foot"><p class="msg">This summer, the hub <em>online</em>.</p><p class="src">ARCH 545B, directed study with Assistant Professor Xun Liu, UBC SALA, 2026. Website: ruijieliuthesis.netlify.app, a working prototype with hypothetical users. Vancouver Building By-law 14343, Book I, Div. A, 1.2.2.3: used materials permitted when they meet the requirements for new ones. Reuse network: 45 businesses across Cascadia.</p></div>
+  <aside class="notes">
+    <p>The second, with Xun Liu, used AI to gather, structure and show data.</p>
+    <p>I built a prototype online hub: <i class="cue">pause</i> users list parts they'd discard, sorted and mapped, and others reserve them for a next build, so materials circulate. Its users are <b class="stress">hypothetical</b>.</p>
+    <p>It showed the barrier: <i class="cue">pause</i> the by-law allows used materials, but <b class="stress">proving</b> an old part meets a new standard costs time and money.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s19" data-time="35" data-title="How I will decide" data-chapter="How I work">
+  <div class="art" id="framework"></div>
+  <div class="foot"><p class="msg">One question: can <em>this</em> part do <em>this</em> job, in <em>this</em> building?</p><p class="src">Reuse Decision Framework: the outcome of both directed studies, ARCH 545A with Joanne Gates (observation on site) and ARCH 545B with Xun Liu (the online research database); report pp. 28–35: twelve criteria (A–L), ranked with Joanne Gates for climate resilience; a material reuse passport, five levels of assessment, eight decisions. Supports design research; does not replace engineering, testing or code review.</p></div>
+  <aside class="notes">
+    <p>Both studies led to one outcome. <i class="cue">pause</i> From observation on site and the online research database, I built the reuse decision framework. It asks: <i class="cue">pause</i> can <b class="stress">this</b> part do <b class="stress">this</b> job, <b class="stress">here</b>?</p>
+    <p>First, identify: a passport of what we know about each part, and what we don't.</p>
+    <p>Then evaluate it for that use: what it is, its carbon, whether it comes out whole.</p>
+    <p>Then decide, weighing evidence against the consequence of failure.</p>
+    <p>And design, least change first, a path into the next building, its record travelling with it.</p>
+  </aside>
+</section>
+
+<!-- ===================== 5 First results ===================== -->
+<section class="slide" id="s20" data-time="9" data-title="Every demolition permit" data-chapter="First results">
+  <div class="art" id="permit-map"></div>
+  <div class="foot"><p class="msg">Demolition fills the <em>house neighbourhoods</em>.</p><p class="src">City of Vancouver open data, issued building permits typed "Demolition / Deconstruction": 7,168 permits, 3 Jan 2017 to 22 Oct 2026, fetched 24 Oct 2026. Each dot is one permit; downtown, the West End, Fairview and Strathcona hold under 3% of them.</p></div>
+  <aside class="notes">
+    <p>My first results map every demolition permit since 2017. <i class="cue">pause</i> They fill the house neighbourhoods, south and east, and almost <b class="stress">skip downtown</b>.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s21" data-time="14" data-title="No requirement" data-chapter="First results">
+  <div class="art"><div class="svg-fig" data-src="figures/astra/recycling-tiers-dark.svg" data-ids='[[], ["layer-none"], ["layer-75"], ["layer-90"]]'></div></div>
+  <div class="foot"><p class="msg">Most permits ask for <em>little, or nothing</em>.</p><p class="src">Tier parsed from permit text, so counts are a floor: 3,831 none stated (53%), 2,651 at 75% (pre-1950, 37%), 686 at 90% (character houses, 10%). Green Demolition By-law No. 11023. Chart: R. Liu with Astra 6.</p></div>
+  <aside class="notes">
+    <p>Then I read what permits ask.</p>
+    <p>Over half ask <b class="stress">nothing</b>, because the Green Demolition By-law targets only older houses.</p>
+    <p>The rest name a share to reuse or recycle, by weight, <i class="cue">keep going</i></p>
+    <p>the highest for character houses.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s22" data-time="22" data-title="Recycled is not reused" data-chapter="First results">
+  <div class="art"><div class="svg-fig" data-src="figures/astra/reuse-comparison-dark.svg" data-ids='[[], ["layer-portland"], ["layer-oregon"], ["layer-vancouver"]]'></div></div>
+  <div class="foot"><p class="msg">Recycled by weight is <em>not</em> reused.</p><p class="src">City of Portland BPS, Deconstruction Program, Sept 2025 (per project, about 4 t reused and 19 t to recovery; foundations excluded); Oregon DEQ 2019, 36 homes, about a quarter salvaged. Vancouver's by-law counts reuse and recycling together by weight. Chart: R. Liu with Astra 6.</p></div>
+  <aside class="notes">
+    <p>By weight, reuse and recycling count <b class="stress">the same</b>.</p>
+    <p>Portland, which requires deconstruction, finds reuse a small share of what leaves the site.</p>
+    <p>An Oregon study of thirty-six homes <b class="stress">confirms it</b>: about a quarter was salvaged.</p>
+    <p>Vancouver counts the two together, so the city publishes no reuse rate. <i class="cue">pause</i> That <b class="stress">empty bar</b> is where my project starts.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s23" data-time="37" data-title="Why wood first" data-chapter="First results">
+  <div class="art" id="woodfirst"></div>
+  <div class="foot"><p class="msg">Wood first: even by hand, most of the lumber was <em>burned</em>.</p><p class="src">City of Vancouver, Deconstruction case study: Dunbar (a 1930 house, taken apart in 17 days in 2019): concrete 39,520 kg, crushed for road fill; lumber 19,220 kg (framing and boards; most pre-1950 homes are old growth, per the case study and Teshnizi 2015), 25% reused, 74% to waste-to-energy, 1% landfill (“lumber shorter than 4' can only be recycled”); 21% reused and 77% recycled overall, so burned lumber counted as recycled; flooring 5,549 kg, 85% reused; plaster 3,090 kg, recycled; fixtures reused through Habitat for Humanity. Metro Vancouver, 2022 Construction and Demolition Waste Composition Study (Dillon, 2023): wood of all kinds is 48% by weight of the 372,000 t disposed of in 2021. Joint: schematic, dowel-laminated, no glue. Chart: R. Liu. More on print 3, Why wood first.</p></div>
+  <aside class="notes">
+    <p>To see where reuse should start, I looked at one best case the City documented: <i class="cue">pause</i> a 1930 Dunbar house, taken apart by hand.</p>
+    <p>The concrete was heaviest and was crushed for road fill; flooring, doors and trim found buyers.</p>
+    <p>But of nineteen tonnes of lumber, <b class="stress">three quarters</b> were burned for energy. The City notes pieces under four feet can only be recycled.</p>
+    <p>Across the region, wood is about half of building waste thrown away.</p>
+    <p>The hub takes the whole house; <i class="cue">pause</i> my research starts with its <b class="stress">wood</b>, and joints for short pieces.</p>
+  </aside>
+</section>
+
+<!-- ===================== 6 The proposal ===================== -->
+<section class="slide" id="s24" data-time="19" data-title="The obstacle is time" data-chapter="The proposal">
+  <div class="art"><div class="svg-fig" data-src="figures/astra/labour-time-dark.svg" data-ids='[[], ["layer-demolition", "layer-deconstruction"], ["layer-deconstruction"]]'></div></div>
+  <div class="foot"><p class="msg">The obstacle is <em>time</em>, and much of it doesn't need the site.</p><p class="src">Catherine Commons, Ithaca, January 2022 (Heisel et al. 2023, Tables 3–4): 447.5 h on site over five days plus 96 h off site; demolition estimated at 48 h. Not a Vancouver forecast. Chart: R. Liu with Astra 6.</p></div>
+  <aside class="notes">
+    <p>Short pieces are one reason so little is reused. Cornell's lab points to another: <i class="cue">pause</i> <b class="stress">time</b>.</p>
+    <p>Taking it apart took about ten times the labour of demolition; on Vancouver land, each day costs money.</p>
+    <p>But much of that slow work needs a roof and bench, <b class="stress">not the site</b>.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s25" data-time="32" data-title="What exists, and what is missing" data-chapter="The proposal">
+  <div class="art" id="precedents"></div>
+  <div class="foot"><p class="msg">Others do <em>single steps</em>; none does them in one public place.</p><p class="src">Precedent survey, 26 Oct 2026: Habitat for Humanity Greater Vancouver ReStore locations; Lynch 2022 (29 providers, “decentralized and loosely organized”); ReBuilding Center, Portland; Seattle Public Utilities Salvage Lumber Warehouse (opened May 2026); Rotor DC, Brussels; Bauteilbörse Basel; baubüro in situ, K.118, Winterthur 2021. Regrading: Teshnizi 2015, UBC SEEDS. City of Vancouver, Council report, 16 May 2018; Rebuild Hub: Habitat for Humanity Greater Vancouver, 9 Oct 2020, and City of Vancouver, “Reducing construction and demolition waste” (read 26 Oct 2026); ReStore locations, habitatgv.ca (read 26 Oct 2026). Row photos from each organisation; Rotor DC by Pascal Broze; K.118 by Martin Zeller.</p></div>
+  <aside class="notes">
+    <p>A place like this exists, <i class="cue">pause</i> but only in pieces.</p>
+    <p>Around Vancouver, firms take houses apart and stores resell parts, loosely organised, Lynch found.</p>
+    <p>Depots from Portland to Basel resell parts; in Winterthur, Switzerland, an extension was built largely from reused parts.</p>
+    <p>Here, salvaged wood has no grading rule, so only engineers can approve it for load.</p>
+    <p>The City backed a hub in 2018; the closest thing today, Habitat for Humanity's Rebuild Hub, gathers salvage but sells <b class="stress">outside the city</b>.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s26" data-time="37" data-title="The deconstruction hub" data-chapter="The proposal">
+  <div class="art" id="hubprog"></div>
+  <div class="foot"><p class="msg">A deconstruction hub, itself <em>built to come apart</em>.</p><p class="src">Program diagram, schematic: first thoughts on the programme and its range, not a layout; no operator, site or intake agreement exists yet. Lorry: "Cargo Truck" by J-Toastie, Poly Pizza, CC BY 3.0, rendered and adapted (box removed, deck and panels added). Workers: Quaternius, CC0. Silhouettes: rawpixel, CC0.</p></div>
+  <aside class="notes">
+    <p><i class="cue">slower</i> So my proposal for GP Two turns the online hub into a building: <i class="cue">pause</i> a public deconstruction hub, sketched as first thoughts.</p>
+    <p>Houses arrive in large components, so sites clear in days.</p>
+    <p>Each part is measured and tested, wood regraded, for its next use; <i class="cue">keep going</i></p>
+    <p>unbuilt by hand, indoors; <i class="cue">keep going</i></p>
+    <p>sorted by lifespan and condition; <i class="cue">keep going</i></p>
+    <p>and offered first to the multiplexes replacing them.</p>
+    <p>A multiplex adds homes but no shared room, so the hub could add rooms along the street.</p>
+    <p>A classroom could look into the work, so students and trades learn by watching.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s27" data-time="17" data-title="Where hubs go" data-chapter="The proposal" data-build>
+  <div class="art" id="siting"></div>
+  <div class="foot"><p class="msg">Hubs go where houses come down <em>and</em> multiplexes go up.</p><p class="src">City of Vancouver open data: house demolition permits 2017–2026 (6,236), new multiplex permits since 2024 (616), zoning districts, truck routes; Statistics Canada 2021 Census by dissemination area. Sites chosen by greedy coverage within 1.5 km of industrial (I, M, IC, MC) or commercial-arterial (C-2, C-3A) land within 200 m of a truck route: rule-based candidates, not selected properties. Why six, from a capacity estimate, and the method: print 4, Where hubs go.</p></div>
+  <aside class="notes">
+    <p>To place hubs, I mapped three things: <i class="cue">keep going</i></p>
+    <p>where houses come down, <i class="cue">keep going</i></p>
+    <p>where multiplexes go up, <i class="cue">keep going</i></p>
+    <p>and land a workshop could use, by a truck route.</p>
+    <p>Six sites reach most of both within a twenty-minute walk, and over a quarter of city households.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s28" data-time="27" data-title="What kind of building" data-chapter="The proposal">
+  <div class="art" id="hubtype"></div>
+  <div class="foot"><p class="msg">Half workshop, half community centre: <em>reuse first</em>.</p><p class="src">Building type, schematic: no building is chosen. Low buildings: City of Vancouver building footprints 2009 (the last set with heights), 600 m² or more, 12 m or less, on industrial or commercial-arterial land within 400 m of each candidate site, and confirmed standing in the City's 2026 property assessment with no demolition permit since 2016 (46 of 51 found). Kinds of building to look for, not properties for sale. Whole-hub size: the ReBuilding Center's 30,000 sq ft store, Portland. Options and reasons: print 5, What kind of building. Lorry: J-Toastie, CC BY 3.0; workers: Quaternius, CC0; silhouettes: rawpixel, CC0.</p></div>
+  <aside class="notes">
+    <p>What kind of building is it? <i class="cue">pause</i> My answer is half workshop, half community centre.</p>
+    <p>Building new, on a cleared lot or under housing, spends carbon and land.</p>
+    <p>So it reuses a low building already there, a store or warehouse, for slow work, <i class="cue">keep going</i></p>
+    <p>and adds a civic front of salvaged parts.</p>
+    <p>Most sites have several such buildings nearby, and this year's City assessments show they still stand.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s29" data-time="19" data-title="What it brings to Vancouver" data-chapter="The proposal">
+  <div class="art value-art">
+    <div class="svg-fig" data-src="figures/astra/resilience-detail-dark.svg" data-ids='[[], ["layer-time"], ["layer-climate", "layer-climate-wall", "layer-climate-eave", "layer-material-brackets"], ["layer-material", "layer-material-brackets"]]'></div>
+    <ol class="values">
+      <li data-focus="1"><b>Time</b>buildings that can change one part at a time</li>
+      <li data-focus="2"><b>Climate</b>for our rain and hotter summers: shed water, shade, dry out</li>
+      <li data-focus="3"><b>Material</b>parts that can be checked, repaired and moved on</li>
+    </ol>
+  </div>
+  <div class="foot"><p class="msg">What it brings: <em>resilience</em> in time, climate and material.</p><p class="src">Design intentions to test, not results. Timber detailing informed by the pagoda study (Yingxian Pagoda, Shanxi), not copied from it. Drawing: R. Liu with Astra 6.</p></div>
+  <aside class="notes">
+    <p>It would bring three kinds of resilience.</p>
+    <p>First, time: buildings that change one part at a time.</p>
+    <p>Second, climate: deep eaves, raised bases, replaceable skins keep timber dry.</p>
+    <p>And third, material: parts that can be checked, repaired and moved on, <i class="cue">pause</i> which I learned from the pagoda study.</p>
+  </aside>
+</section>
+
+<!-- ===================== 7 The plan ===================== -->
+<section class="slide" id="s30" data-time="23" data-title="The year ahead" data-chapter="The plan">
+  <div class="art" id="plan"></div>
+  <div class="foot"><p class="msg">Two tracks, six checkpoints, <em>one hub</em>.</p><p class="src">ARCH 548 syllabus, fall 2026: Site and Program due 18 Nov, Progress Review 2 on 2 Dec, GP I booklet due 18 Dec. GP II interim and final follow the pattern of the GP guidelines (late February, late April); dates to confirm. A working plan, open until settled with my chair: no house is selected and no site access is secured yet. Covers: Viking, 1994; Park Books, 2022.</p></div>
+  <aside class="notes">
+    <p>This plan is still open, <i class="cue">pause</i> until I work it through with my chair.</p>
+    <p>To assess, I will follow three houses near the first hub site into their multiplexes, and catalogue one.</p>
+    <p>To design, I will test joints for short lumber, then design the hub.</p>
+    <p>Two readings guide it: Brand, and the Swiss compendium Re-Use in Construction.</p>
+  </aside>
+</section>
+
+<section class="slide" id="s31" data-time="29" data-title="Buildings adapt anyway" data-chapter="The plan" data-build>
+  <blockquote class="brandq">
+    <p class="q-lead" data-focus="0 1 2 3">Architecture, we imagine, is permanent.</p>
+    <p class="q-main" data-focus="1 2 3">Almost no buildings adapt well.</p>
+    <ul class="q-nots" data-focus="2 3">
+      <li>They're designed <b>not to</b> adapt;</li>
+      <li>also budgeted and financed <b>not to</b>,</li>
+      <li>constructed <b>not to</b>,</li>
+      <li>administered <b>not to</b>,</li>
+      <li>maintained <b>not to</b>,</li>
+      <li>regulated and taxed <b>not to</b>,</li>
+      <li>even remodeled <b>not to</b>.</li>
+    </ul>
+    <p class="q-turn" data-focus="3">But all buildings (except monuments) adapt anyway, however poorly, because the usages in and around them are changing constantly.</p>
+  </blockquote>
+  <div class="foot"><span></span><p class="src">Stewart Brand, How Buildings Learn, 1994, ch. 1, “Flow”.</p></div>
+  <aside class="notes">
+    <p>I'll end with Brand: <i class="cue">pause</i> “Architecture, we imagine, is permanent.” <i class="cue">pause</i></p>
+    <p><i class="cue">slower</i> “Almost no buildings adapt well.</p>
+    <p>They're designed not to adapt; also budgeted and financed not to, constructed not to, administered not to, maintained not to, regulated and taxed not to, even remodeled not to.</p>
+    <p>But all buildings, except monuments, <b class="stress">adapt anyway</b>, however poorly, because the usages in and around them are changing constantly.” <i class="cue">pause</i></p>
+  </aside>
+</section>
+
+<section class="slide quote" id="s32" data-time="27" data-title="Questions" data-chapter="The plan">
+  <ol class="qs qs-long">
+    <li data-focus="1">Is a public hub, a reused workshop with a civic front, the right building to keep these materials in use?</li>
+    <li data-focus="2">Few records show how a house comes apart: are online videos enough, or should I be on site?</li>
+    <li data-focus="3">Should I study the multiplexes going up, not only the houses coming down?</li>
+  </ol>
+  <div class="foot"><span></span><p class="src">Thank you.</p></div>
+  <aside class="notes">
+    <p><i class="cue">slower</i> To close, I have one question, and two doubts of my own.</p>
+    <p>Is this hub, a reused workshop with a civic front, the right building to keep these materials in use?</p>
+    <p>Few records show how houses come apart; are online videos enough, or should I be on site?</p>
+    <p>And should I study multiplexes going up, not only houses coming down? <i class="cue">pause</i> Thank you.</p>
+  </aside>
+</section>
+
+<!-- ===================== references (not spoken) ===================== -->
+<section class="slide refs-slide" id="s33" data-time="0" data-title="References" data-chapter="">
+  <header class="refs-head"><h2>References</h2><p>Works cited in this presentation, A to Z</p></header>
+  <div class="refs">
+    <p>Addis, Bill. <em>Building with Reclaimed Components and Materials</em>. Earthscan, 2006.</p>
+    <p>baubüro in situ. K.118, Kopfbau Halle 118, Winterthur, for Stiftung Abendrot, 2021.</p>
+    <p>Bauteilbörse Basel. Reuse depot, Basel, since 1995.</p>
+    <p>Brand, Stewart. <em>How Buildings Learn: What Happens After They’re Built</em>. Viking, 1994.</p>
+    <p>CMHC / Ha/f Climate Design. <em>Housing Design Catalogue: Materials Guide</em>. August 2025.</p>
+    <p>CMHC. <em>Rental Market Report</em>. 11 December 2025.</p>
+    <p>City of Portland, BPS. Deconstruction Program data, September 2025.</p>
+    <p>City of Vancouver. <em>Building By-law No. 14343</em>, Book I, Division A, 1.2.2.3 (used materials).</p>
+    <p>City of Vancouver. <em>Green Demolition By-law No. 11023</em>, consolidated 9 December 2025.</p>
+    <p>City of Vancouver. <em>Low Density Housing Options How-to Guide</em>, December 2025; R1-1 District Schedule.</p>
+    <p>City of Vancouver. Council report on a deconstruction hub (Innovation Fund), 16 May 2018.</p>
+    <p>City of Vancouver. “Reducing construction and demolition waste”, accessed 26 October 2026.</p>
+    <p>City of Vancouver. <em>Deconstruction case study: Dunbar</em> (a 1930 house, taken apart in 2019); “Deconstruction”, accessed 27 October 2026.</p>
+    <p>City of Vancouver Open Data. Issued building permits; local areas; zoning districts; truck routes; community centres; rapid transit stations; City-owned properties; building footprints 2009 and 2015. Fetched 24–26 October 2026.</p>
+    <p>Cooper, Marshall and Yaron. <em>A Blueprint for Change</em>. Light House Sustainability Society, 2023.</p>
+    <p>Cornell Circular Construction Lab. Catherine Commons; <em>Circulating Matters</em>, 2022. Heisel et al. 2023.</p>
+    <p>Dahmen, von Bergmann and Das. "Teardown Index." In <em>Examining the Environmental Impacts of Materials and Buildings</em>, IGI Global, 2020.</p>
+    <p>Gorgolewski, Mark. "Designing with Reused Building Components." <em>Building Research &amp; Information</em> 36(2), 2008.</p>
+    <p>Habitat for Humanity Greater Vancouver. ReStore locations, accessed 26 October 2026; “The Rebuild Hub”, 9 October 2020.</p>
+    <p>Institute of Constructive Design, ZHAW (Stricker, Brandi, Sonderegger et al., eds.). <em>Re-Use in Construction: A Compendium of Circular Architecture</em>. Park Books, 2022.</p>
+    <p>ISO 20887:2020. <em>Design for Disassembly and Adaptability</em>.</p>
+    <p>Lambec, Bastien-Masse and Fivet. "Procedures Used to Determine the Reuse Potential of Building Elements." <em>Frontiers in Built Environment</em> 11, 2025.</p>
+    <p>Liang Ssu-ch'eng (Liang Sicheng). <em>A Pictorial History of Chinese Architecture</em>. Ed. Wilma Fairbank. MIT Press, 1984.</p>
+    <p>Liu, Ruijie. <em>The Constructed Quarry</em>. Directed studies, UBC SALA, 2026; ruijieliuthesis.netlify.app.</p>
+    <p>Lynch, Nicholas. "Unbuilding the City." <em>Environment and Planning A</em> 54(8), 2022.</p>
+    <p>Meyboom, AnnaLisa, and Kaia Nielsen-Roine. “Reuse of Wood Construction and Demolition Waste: Potentials for Canada.” <em>Canadian Architect</em>, 1 April 2025.</p>
+    <p>Metro Vancouver. Construction and Demolition Waste; <em>2022 Construction &amp; Demolition Waste Composition Study</em>, Dillon Consulting, October 2023.</p>
+    <p>MIT Building Technology. Wade, Berglund-Brown and Ochsendorf, demolition trends for structural reuse (MSRP); Build Reuse conference report, 2025.</p>
+    <p>Nielsen-Roine, Kaia, AnnaLisa Meyboom and Hemi Patel. <em>Design for Deconstruction in Light Wood Frame</em>. Guidebook, UBC, January 2025.</p>
+    <p>Nunes / Oregon DEQ. Deconstruction and demolition comparison, 36 Portland homes, 2019.</p>
+    <p>ReBuilding Center, Portland. What we do; deconstruction services closed 2019.</p>
+    <p>Rose and Stegemann. "Characterising Existing Buildings as Material Banks." <em>Engineering Sustainability</em> 172(3), 2019.</p>
+    <p>Rotor DC, Brussels. About us; Rotor, stories.</p>
+    <p>Schröder, Cappeller, Diesch and Scaffidi. <em>Circular Design: Towards Regenerative Territories</em>. Jovis, 2023.</p>
+    <p>Seattle Public Utilities and Earthwise. Salvage Lumber Warehouse, opened 1 May 2026 (KUOW, 2026).</p>
+    <p>Statistics Canada. 2021 Census Profile by dissemination area; 2021 cartographic boundaries.</p>
+    <p>Teshnizi, Z. <em>Opportunities and Barriers for Reuse of Salvaged Dimensional Lumber</em>. UBC SEEDS, 2015.</p>
+    <p>UNEP / GlobalABC (Global Alliance for Buildings and Construction). <em>Global Status Report for Buildings and Construction 2024/2025</em>. 17 March 2025.</p>
+    <p>UNESCO Tentative List. Wooden Pagoda of Yingxian County, 2013.</p>
+    <p>Unbuilders, Vancouver (company claims are its own; trading status not confirmed).</p>
+    <p>Source images on slides 11, 13, 25 and 30 (covers, first pages, photos) come from the publishers and organisations named there and are shown for teaching use; Lynch 2022 and Lambec et al. 2025 are open access under CC BY 4.0.</p>
+    <p>Models, adapted and rendered in the board camera: “Excavator” by RhymOne, Sketchfab, CC BY 4.0; “Cargo Truck” by J-Toastie, Poly Pizza, CC BY 3.0; construction worker by Quaternius, Poly Pizza, CC0.</p>
+    <p>Drawings by the author; slides 3, 5, 7, 8, 12, 21, 22, 24 and 29 drawn with Astra 6 (gpt-6-astra) to the author's brief; figure kits Hairline (MIT) and Anatomy (MIT); GSAP 3.12.5; three.js r149; Archivo (OFL).</p>
+  </div>
+  <div class="foot"><span></span><p class="src">References. Not presented.</p></div>
+  <aside class="notes"><p>Not presented.</p></aside>
+</section>
+
+<!-- practice controls and the chapter bar -->
+<nav class="chapters" id="chapters" aria-label="Chapters"></nav>
+<div class="controls" id="controls">
+  <details class="prints"><summary title="Pin-up prints, ARCH D, 24 × 36 in">Prints</summary>
+    <div class="menu">
+      <p>Pin-up prints, ARCH D (24 × 36 in), vector PDF, in the order the talk reaches them</p>
+      <div><a href="prints/framework.html">1 · Reuse decision framework</a><a class="dl" href="prints/pdf/RLiu_GP1_1_reuse-decision-framework_ARCH-D.pdf" download>PDF</a></div>
+      <div><a href="prints/atlas.html">2 · Every demolition permit</a><a class="dl" href="prints/pdf/RLiu_GP1_2_demolition-permit-atlas_ARCH-D.pdf" download>PDF</a></div>
+      <div><a href="prints/wood.html">3 · Why wood first</a><a class="dl" href="prints/pdf/RLiu_GP1_3_why-wood-first_ARCH-D.pdf" download>PDF</a></div>
+      <div><a href="prints/hubs.html">4 · Where hubs go</a><a class="dl" href="prints/pdf/RLiu_GP1_4_where-hubs-go_ARCH-D.pdf" download>PDF</a></div>
+      <div><a href="prints/hubtype.html">5 · What kind of building</a><a class="dl" href="prints/pdf/RLiu_GP1_5_what-kind-of-building_ARCH-D.pdf" download>PDF</a></div>
+    </div>
+  </details>
+  <details class="prints phone" id="phone"><summary title="Scan to drive the board from your phone, with the script on it; opening this hands the phone to this window">Phone</summary><div class="menu"><p>Checking the server.</p></div></details>
+  <button type="button" id="btn-audience" aria-pressed="false" title="Open the audience window for the projector; it follows every click here (A)">Audience</button>
+  <button type="button" id="btn-script" aria-pressed="false" title="Show or hide the script (S)">Script</button>
+  <button type="button" id="btn-timer" aria-pressed="false" title="Start or pause the timer (T)">Timer</button>
+  <button type="button" class="present" id="btn-present" title="Present full screen with no script (F)">Present</button>
+</div>
+<aside class="script" id="script" aria-live="polite"><h4 id="script-h"></h4><div class="now" id="script-now"></div><div class="next" id="script-next"></div></aside>
+<nav class="timebar" aria-label="Talk time"><div class="scale" id="scale"></div><button class="clock" id="clock" type="button" title="Start or pause the timer (T)">0:00 / 8:40</button></nav>
+<div class="help" id="help">
+  <div><kbd>→</kbd><kbd>Space</kbd>next sentence, part or slide</div>
+  <div><kbd>←</kbd>back</div>
+  <div><kbd>S</kbd>script on or off (practice)</div>
+  <div><kbd>F</kbd>present, <kbd>Esc</kbd>back to practice</div>
+  <div><kbd>A</kbd>audience window for the projector</div>
+  <div><kbd>T</kbd>timer, <kbd>R</kbd>reset</div>
+  <div><kbd>W</kbd>play the wall figure</div>
+  <div><kbd>?</kbd>this help</div>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/data/hubreach.js?v=104"></script>
+<script src="assets/data/people.js?v=104"></script>
+<script src="assets/data/models.js?v=104"></script>
+<script src="assets/data/map.js?v=104"></script>
+<script src="assets/data/siting.js?v=104"></script>
+<script src="assets/data/stock.js?v=104"></script>
+<script src="assets/data/sources.js?v=104"></script>
+<script src="assets/data/figures.js?v=104"></script>
+<script src="assets/vendor/hairline-kernel.js"></script>
+<script src="assets/js/iso.js?v=104"></script>
+<script src="assets/js/hero.js?v=104"></script>
+<script src="assets/js/charts.js?v=104"></script>
+<script src="assets/vendor/qrcode-generator-2.0.4.js"></script>
+<script src="assets/js/board.js?v=104"></script>
+<script src="figures/astra/dougong-bapuzuo-model.js?v=104"></script>
+<script src="assets/js/dougong.js?v=104"></script>
+<script src="assets/js/hairline-host.js?v=104"></script>
+<script src="figures/wall.js?v=104"></script>
+</body>
+</html>

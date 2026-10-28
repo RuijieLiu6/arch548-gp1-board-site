@@ -1,0 +1,88 @@
+/* The HTML ARCH D posters (24 x 36 in): prints 4 and 5, which merge a pin-up
+   sheet with its supplement. Light paper, ink type, the board's colour coding,
+   sized in points for a sheet read from a metre or two. On screen the poster
+   is zoomed to fit the window; printed (or saved to PDF) it fills one sheet. */
+:root {
+  --paper: #F6F3EC; --ink: #1A1A1A; --muted: #6B6F7A; --rule: #CFCAC0;
+  --sun: #D9A400; --sky: #2F8FD0; --orange: #E8741A; --magenta: #D6336F; --teal: #189E86; --lav: #7A6FD8; --ash: #8A8FA3;
+}
+@page { size: 24in 36in; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #2A2D33; color: var(--ink); font-family: "Archivo", system-ui, sans-serif; }
+.bar { position: sticky; top: 0; z-index: 2; display: flex; gap: 12px; align-items: center; padding: 10px 16px; background: #15171C; color: #F3EFE6; font-size: 14px; }
+.bar a { color: #F3EFE6; text-decoration: none; border: 1px solid #4A4F5C; border-radius: 999px; padding: 5px 14px; }
+.bar a.pdf { background: #FF4F9A; border-color: #FF4F9A; color: #0B0E14; }
+.bar span { margin-left: auto; color: #9AA0AE; }
+
+.poster { width: 24in; height: 36in; margin: 16px auto 40px; padding: 0.85in 0.95in 0.7in; background: var(--paper); box-shadow: 0 12px 40px rgba(0, 0, 0, .45); display: flex; flex-direction: column; gap: 0.28in; overflow: hidden; }
+@media print {
+  html, body { background: var(--paper); }
+  .bar { display: none; }
+  .poster { margin: 0; box-shadow: none; zoom: 1 !important; }
+}
+
+/* type */
+.kicker { margin: 0; padding-bottom: 9pt; border-bottom: 1.6pt solid var(--ink); font-size: 15pt; color: var(--muted); }
+h1 { margin: 0 0 12pt; font-weight: 300; font-size: 100pt; line-height: 0.95; letter-spacing: -0.025em; }
+.lede { margin: 0; font-size: 21pt; line-height: 1.32; font-weight: 300; color: #3D4049; max-width: 48ch; }
+h2 { margin: 0 0 8pt; font-size: 20pt; font-weight: 600; letter-spacing: -0.005em; }
+h2.sec { font-size: 29pt; margin-bottom: 10pt; }
+h3 { margin: 0 0 6pt; font-size: 18pt; font-weight: 600; }
+p, li { font-size: 15.5pt; line-height: 1.42; margin: 0 0 9pt; }
+.intro { max-width: 70ch; color: #3D4049; }
+.cap { font-size: 13pt; line-height: 1.38; color: var(--muted); margin-top: 5pt; }
+b { font-weight: 600; }
+ul { margin: 0 0 8pt; padding-left: 0; list-style: none; }
+
+/* layout */
+.head { display: grid; grid-template-columns: 1fr 9in; gap: 0.6in; align-items: end; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.3in; padding-bottom: 6pt; }
+.stats b { display: block; font-size: 60pt; font-weight: 300; line-height: 1; letter-spacing: -0.02em; }
+.stats span { display: block; margin-top: 8pt; font-size: 14.5pt; line-height: 1.3; color: var(--muted); }
+.band { border-top: 0.9pt solid var(--rule); padding-top: 0.22in; }
+.head + .band { border-top: none; padding-top: 0; }
+.map svg, .chart svg, .week svg, .fig svg { display: block; width: 100%; height: auto; }
+.map-band { display: grid; grid-template-columns: 13in 1fr; gap: 0.5in; align-items: start; }
+.side p { font-size: 15pt; }
+.side h2 { margin-top: 14pt; }
+.side h2:first-child { margin-top: 0; }
+.key li { display: flex; align-items: center; gap: 10pt; font-size: 14.5pt; margin-bottom: 6pt; }
+.dot, .sq, .ring { display: inline-block; flex: none; }
+.dot { width: 11pt; height: 11pt; border-radius: 50%; }
+.sq { width: 14pt; height: 14pt; border-radius: 3pt; }
+.ring { width: 18pt; height: 18pt; border-radius: 50%; border: 2pt dashed var(--orange); background: rgba(232, 116, 26, .08); }
+.sun { background: var(--sun); } .mag { background: var(--magenta); } .teal { background: var(--teal); opacity: .8; }
+.lav { background: var(--lav); } .orange { background: var(--orange); }
+.rules-band { display: grid; grid-template-columns: 3.5in 1fr; gap: 0.45in; }
+.rules { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.28in; }
+.rules figure { margin: 0; }
+.rules figcaption { margin-top: 6pt; font-size: 13pt; line-height: 1.36; color: var(--muted); }
+.rules figcaption b { display: flex; align-items: center; gap: 8pt; font-size: 16.5pt; color: var(--ink); margin-bottom: 4pt; }
+.rn { display: inline-grid; place-items: center; width: 24pt; height: 24pt; border-radius: 50%; background: var(--ink); color: var(--paper); font-size: 12pt; font-weight: 600; }
+.cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.17in; }
+.card { background: #FFFFFF; border: 0.8pt solid var(--rule); border-radius: 10pt; padding: 12pt 13pt 10pt; }
+.card h3 { display: flex; gap: 7pt; font-size: 15.5pt; line-height: 1.2; min-height: 2.45em; margin-bottom: 4pt; }
+.card .o { color: var(--orange); font-weight: 700; }
+.card .m { font-size: 12pt; line-height: 1.35; color: var(--muted); margin: 0 0 6pt; }
+.card .big { margin: 4pt 0 6pt; font-size: 34pt; font-weight: 300; line-height: 1; color: var(--lav); }
+.card .big small { display: block; margin-top: 4pt; font-size: 12pt; color: var(--muted); }
+.card dl { display: grid; grid-template-columns: auto 1fr; gap: 3pt 8pt; margin: 0 0 9pt; font-size: 12.5pt; line-height: 1.25; }
+.card dt { font-weight: 600; text-align: right; }
+.card dd { margin: 0; color: var(--muted); }
+.card .share { display: flex; gap: 1.5pt; height: 9pt; margin-bottom: 5pt; }
+.card .share i { display: block; height: 100%; border-radius: 2pt; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6in; }
+.three { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5in; }
+.formula { font-size: 15pt; padding: 9pt 13pt; border: 0.9pt solid var(--rule); border-radius: 8pt; background: #FFFFFF; }
+.facts li { font-size: 14.5pt; margin-bottom: 8pt; }
+.facts.small li { font-size: 14pt; margin-bottom: 7pt; }
+.week { width: 92%; margin-top: 8pt; }
+.prog li { display: flex; align-items: baseline; gap: 10pt; font-size: 14.5pt; }
+.prog li b { white-space: nowrap; }
+.prog li .sq { transform: translateY(2pt); }
+table { border-collapse: collapse; width: 100%; font-size: 13.5pt; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 5pt 8pt 5pt 0; border-bottom: 0.7pt solid var(--rule); vertical-align: top; }
+th { font-weight: 600; font-size: 12pt; color: var(--muted); }
+td.n, th.n { text-align: right; }
+.hl { background: rgba(232, 116, 26, .16); font-weight: 600; }
+.foot { margin-top: auto; display: flex; justify-content: space-between; gap: 0.5in; padding-top: 8pt; border-top: 0.8pt solid var(--rule); font-size: 12.5pt; color: var(--muted); }

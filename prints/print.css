@@ -1,0 +1,75 @@
+/* The ARCH D prints (24 x 36 in): light paper, ink lines, the board's colour
+   coding. On screen a print fits the window with a small bar to download its
+   PDF; printed (or saved to PDF) it fills one ARCH D sheet, all vector. */
+@import url("../assets/fonts/archivo.css");
+
+:root {
+  --paper: #F6F3EC;
+  --ink: #1A1A1A;
+  --muted: #6B6F7A;
+  --rule: #CFCAC0;
+  --sun: #D9A400; --sky: #2F8FD0; --orange: #E8741A; --rose: #D9477E; --magenta: #D6336F;
+  --teal: #189E86; --green: #3E9E4A; --lav: #7A6FD8; --cobalt: #3355D6; --ash: #8A8E9C; --red: #D9442B;
+}
+@page { size: 24in 36in; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #2A2D33; color: var(--ink); font-family: "Archivo", system-ui, sans-serif; }
+.bar { position: sticky; top: 0; z-index: 2; display: flex; gap: 12px; align-items: center; padding: 10px 16px; background: #15171C; color: #F3EFE6; font-size: 14px; }
+.bar a { color: #F3EFE6; text-decoration: none; border: 1px solid #4A4F5C; border-radius: 999px; padding: 5px 14px; }
+.bar a.pdf { background: #FF4F9A; border-color: #FF4F9A; color: #0B0E14; }
+.bar span { margin-left: auto; color: #9AA0AE; }
+.sheet { width: min(100vw - 32px, (100vh - 80px) * 2 / 3 * 1.6); aspect-ratio: 2 / 3; margin: 16px auto 40px; background: var(--paper); box-shadow: 0 12px 40px rgba(0, 0, 0, .45); }
+.sheet > svg { display: block; width: 100%; height: 100%; }
+@media print {
+  html, body { background: var(--paper); }
+  .bar { display: none; }
+  .sheet { width: 24in; height: 36in; margin: 0; box-shadow: none; }
+}
+
+/* text and lines inside a print */
+svg.print text { font-family: "Archivo", sans-serif; }
+svg.print .muted { fill: var(--muted); }
+svg.print .rule { stroke: var(--rule); stroke-width: 0.8; fill: none; }
+
+/* the board's axonometric classes, re-inked for paper */
+svg .dwg, svg.dwg { overflow: visible; }
+.print .dwg .glow, .print .glow { filter: none; }
+.print .dwg .sil-pass * { stroke: #1A1A1A !important; stroke-width: 2.2px !important; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.print .dwg .f { stroke: #1A1A1A; stroke-width: 0.5px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.print .dwg .ln { fill: none; stroke: #1A1A1A; stroke-width: 0.8px; vector-effect: non-scaling-stroke; }
+.print .dwg .lo { fill: none; stroke: #9A958B; stroke-width: 0.6px; vector-effect: non-scaling-stroke; }
+.print .dwg .hid { fill: none; stroke: #9A958B; stroke-width: 0.6px; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.print .dwg .wl { fill: none; stroke: rgba(255, 255, 255, .9); stroke-width: 0.8px; vector-effect: non-scaling-stroke; }
+.print .dwg .thick { stroke-width: 1.4px; }
+.print .dwg .dsh { stroke-dasharray: 3 4; }
+.print .dwg .route { fill: none; stroke: var(--magenta); stroke-width: 1.8px; stroke-dasharray: 5 4; vector-effect: non-scaling-stroke; }
+.print .dwg .route-b { fill: none; stroke: var(--sky); stroke-width: 1.6px; stroke-dasharray: 5 4; vector-effect: non-scaling-stroke; }
+.print .dwg .lead { fill: none; stroke: var(--muted); stroke-width: 0.7px; vector-effect: non-scaling-stroke; }
+.print .dwg .m-house.fx { fill: #FBE8A6; } .print .dwg .m-house.fy { fill: #E9CF73; } .print .dwg .m-house.fz { fill: #FFF3CC; }
+.print .dwg .m-roof.fx { fill: #8C93AC; } .print .dwg .m-roof.fy { fill: #747B96; } .print .dwg .m-roof.fz { fill: #A7ADC2; }
+.print .dwg .m-slab.fx { fill: #F1C9A2; } .print .dwg .m-slab.fy { fill: #DCAF84; } .print .dwg .m-slab.fz { fill: #F7DDC3; }
+.print .dwg .m-green.fx { fill: #A6D98F; } .print .dwg .m-green.fy { fill: #86C46C; } .print .dwg .m-green.fz { fill: #C3E6B2; }
+.print .dwg .m-hub.fx { fill: #F7A55C; } .print .dwg .m-hub.fy { fill: #E58C3D; } .print .dwg .m-hub.fz { fill: #FBC48F; }
+.print .dwg .m-salmon.fx { fill: #F6A897; } .print .dwg .m-salmon.fy { fill: #E58E7C; } .print .dwg .m-salmon.fz { fill: #FBC7BB; }
+.print .dwg .m-lav.fx { fill: #C2BCF4; } .print .dwg .m-lav.fy { fill: #A69DEB; } .print .dwg .m-lav.fz { fill: #DBD7FA; }
+.print .dwg .m-pink.fx { fill: #F8BDD0; } .print .dwg .m-pink.fy { fill: #EE9FB9; } .print .dwg .m-pink.fz { fill: #FCD6E2; }
+.print .dwg .m-glass.fx { fill: #CFEAFB; } .print .dwg .m-glass.fy { fill: #ACD8F2; } .print .dwg .m-glass.fz { fill: #E5F4FD; }
+.print .dwg .m-white.fx { fill: #FFFFFF; } .print .dwg .m-white.fy { fill: #E6E3EE; } .print .dwg .m-white.fz { fill: #FFFFFF; }
+.print .dwg .m-navy.fx { fill: #4A5DC0; } .print .dwg .m-navy.fy { fill: #3446A0; } .print .dwg .m-navy.fz { fill: #6577D2; }
+.print .dwg .m-cobalt.fx { fill: #6D8BFF; } .print .dwg .m-cobalt.fy { fill: #4D6CEC; } .print .dwg .m-cobalt.fz { fill: #93A9FF; }
+.print .dwg .m-red.fx { fill: #FF8068; } .print .dwg .m-red.fy { fill: #EF6650; } .print .dwg .m-red.fz { fill: #FFA391; }
+.print .dwg .m-sun.fx { fill: #FFD84F; } .print .dwg .m-sun.fy { fill: #F2C230; } .print .dwg .m-sun.fz { fill: #FFE68A; }
+.print .dwg .m-rose.fx { fill: #FFB0D0; } .print .dwg .m-rose.fy { fill: #F592B8; } .print .dwg .m-rose.fz { fill: #FFCBE0; }
+.print .dwg .m-teal.fx { fill: #69E2CF; } .print .dwg .m-teal.fy { fill: #43CDB7; } .print .dwg .m-teal.fz { fill: #96EDE0; }
+.print .dwg .m-sky.fx { fill: #A6DAFF; } .print .dwg .m-sky.fy { fill: #84C6F5; } .print .dwg .m-sky.fz { fill: #C6E7FF; }
+.print .dwg .m-ash.fx { fill: #A3A8BA; } .print .dwg .m-ash.fy { fill: #8A8FA3; } .print .dwg .m-ash.fz { fill: #BDC1CF; }
+.print .dwg .m-purple.fx { fill: #BCA4FF; } .print .dwg .m-purple.fy { fill: #A488F5; } .print .dwg .m-purple.fz { fill: #D2C3FF; }
+.print .dwg .m-grass.fx { fill: #7FD493; } .print .dwg .m-grass.fy { fill: #62C27A; } .print .dwg .m-grass.fz { fill: #A2E2B1; }
+.print .dwg .m-carried.fx { fill: #FF7DB5; } .print .dwg .m-carried.fy { fill: #F25C9F; } .print .dwg .m-carried.fz { fill: #FFA3CB; }
+.print .dwg .g-street { fill: #D8DDEA; } .print .dwg .g-walk { fill: #E7E3DA; } .print .dwg .g-yard { fill: #DDEBD4; } .print .dwg .g-lane { fill: #ECE8E0; }
+.print .dwg .g-plaza { fill: #F6D6E4; } .print .dwg .g-floor { fill: #EEE7D5; } .print .dwg .g-mint { fill: #D6EDE6; }
+.print .dwg .dot { fill: var(--magenta); }
+.print .dwg .zebra { fill: #FFFFFF; }
+.print .dwg .tree-a { fill: #A2E894; } .print .dwg .tree-b { fill: #4FC46A; } .print .dwg .tree-c { fill: #2E9E52; } .print .dwg .tree-d { fill: #C8C04A; }
+.print .dwg .trunk { fill: none; stroke: #8A5A3C; stroke-width: 1.2px; vector-effect: non-scaling-stroke; }
+.print .dwg .wheel { fill: none; stroke: #1A1A1A; stroke-width: 0.7px; vector-effect: non-scaling-stroke; }
